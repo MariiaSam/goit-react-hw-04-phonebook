@@ -1,10 +1,11 @@
+import { useEffect, useState } from 'react';
+import { nanoid } from 'nanoid';
+
 import { Section } from './Section/Section';
 import { ContactForm } from './ContactForm/ContactForm';
 import { ContactsTitle } from './ContactsTitle/ContactsTitle';
 import { Filter } from './Filter/Filter';
 import { ContactList } from './ContactList/ContactList';
-import { useEffect, useState } from 'react';
-import { nanoid } from 'nanoid';
 
 const getContactsStorage = () => {
   const contactsStorage = localStorage.getItem('contacts');
