@@ -6,10 +6,10 @@ import {
   Span,
 } from './ContactList.styled';
 
-export const ContactList = ({ filtered, onDelete }) => {
+export const ContactList = ({ contacts, onDelete }) => {
   return (
     <ContactWrap>
-      {filtered.map(({ id, name, number }) => {
+      {contacts.map(({ id, name, number }) => {
         return (
           <ContactListItem key={id}>
             <Span>{name}:</Span>
@@ -26,7 +26,7 @@ export const ContactList = ({ filtered, onDelete }) => {
 };
 
 ContactList.propTypes = {
-  filtered: PropTypes.arrayOf(
+  contacts: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
